@@ -5,10 +5,6 @@ const url = require("url");
 const slugify = require("slugify");
 const replaceTemplate = require("./modules/replaceTemplate");
 
-//so basically replaceTemplate here is also identical to the replace template in our code below
-//where temp = tempCard representing the html
-//and product representing el, which is also the array
-
 const tempOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
   "utf-8"
@@ -40,7 +36,6 @@ const server = http.createServer((req, res) => {
   console.log(query + ": query");
 
   //Overiew Page
-  //confirming that root path and overview path leads to overview page
   if (pathName === "/" || pathName === "/overview") {
     //sending a response to the server that we are about to send content-type of html format
     res.writeHead(200, { "Content-type": "text/html" });
