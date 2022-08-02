@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
   console.log(query + ": query");
 
   //Overiew Page
-  if (pathName === "/" || pathName === "/overview") {
+  if (pathName === "/" || pathName === "/overview" || pathName === "/overview/") {
     //sending a response to the server that we are about to send content-type of html format
     res.writeHead(200, { "Content-type": "text/html" });
 
